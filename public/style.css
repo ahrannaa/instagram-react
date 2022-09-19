@@ -195,8 +195,21 @@ h1 {
   font-size: 20px;
 }
 
+.pic-icons-right button {
+  font-size: 20px;
+}
+
+.heart {
+  color: red;
+}
+
 .pic-icons-left {
   margin: 10px 8px 0 0;
+  color: #000000;
+  font-size: 20px;
+}
+
+.pic-icons-left button{
   color: #000000;
   font-size: 20px;
 }
