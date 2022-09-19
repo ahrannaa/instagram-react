@@ -233,6 +233,11 @@ h1 {
   width: 293px;
 }
 
+button{
+  background-color: #fafafa;
+  border: none;
+}
+
 .perfil {
   background-color: #fafafa;
   display: flex;

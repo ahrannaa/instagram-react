@@ -1,4 +1,31 @@
+ function Seguir(props){
+  return(
+    <div class="sugestao">
+               <div class="sugestao-img">
+                 <img src={props.imagem} alt={props.nome} />
+               </div>
+ 
+               <div class="sugestao-info">
+                 <div class="sugestao-nick">{props.nome}</div>
+                 <div class="sugestao-username">segue você</div>
+               </div>
+ 
+               <div class="seguir-link">Seguir</div>
+             </div>
+ 
+  )
+ }
+
 export default function Sugestoes(){
+
+  const Sugestao = [
+    {nome: "astrolouco", imagem:"img/leao.png"},
+    {nome: "bigastral", imagem:"img/libra.png"},
+    {nome: "goodsignos", imagem:"img/sagitario.png"},
+    {nome: "signos2022", imagem:"img/peixes.png"},
+    {nome: "curtesignos", imagem:"img/touro.png"},
+  ]
+
   return (
     <div class="sugestoes">
             <div class="sugestoes-header">
@@ -9,71 +36,7 @@ export default function Sugestoes(){
                 <p>Ver tudo</p>
               </div>
             </div>
-
-            <div class="sugestao">
-              <div class="sugestao-img">
-                <img src="img/leao.png" alt="leao-sidebar" />
-              </div>
-
-              <div class="sugestao-info">
-                <div class="sugestao-nick">astrolouco</div>
-                <div class="sugestao-username">segue você</div>
-              </div>
-
-              <div class="seguir-link">Seguir</div>
+              {Sugestao.map((s) => <Seguir nome={s.nome} imagem={s.imagem}/>)}
             </div>
-
-            <div class="sugestao">
-              <div class="sugestao-img">
-                <img src="img/libra.png" alt="libra-sidebar" />
-              </div>
-
-              <div class="sugestao-info">
-                <div class="sugestao-nick">bigastral</div>
-                <div class="sugestao-username">segue você</div>
-              </div>
-
-              <div class="seguir-link">Seguir</div>
-            </div>
-
-            <div class="sugestao">
-              <div class="sugestao-img">
-                <img src="img/sagitario.png" alt="sagitario-sidebar" />
-              </div>
-
-              <div class="sugestao-info">
-                <div class="sugestao-nick">goodsignos</div>
-                <div class="sugestao-username">segue você</div>
-              </div>
-
-              <div class="seguir-link">Seguir</div>
-            </div>
-
-            <div class="sugestao">
-              <div class="sugestao-img">
-                <img src="img/peixes.png" alt="peixes-sidebar" />
-              </div>
-
-              <div class="sugestao-info">
-                <div class="sugestao-nick">signos2022</div>
-                <div class="sugestao-username">segue você</div>
-              </div>
-
-              <div class="seguir-link">Seguir</div>
-            </div>
-
-            <div class="sugestao">
-              <div class="sugestao-img">
-                <img src="img/touro.png" alt="touro-sidebar" />
-              </div>
-
-              <div class="sugestao-info">
-                <div class="sugestao-nick">curtesignos</div>
-                <div class="sugestao-username">segue você</div>
-              </div>
-
-              <div class="seguir-link">Seguir</div>
-            </div>
-          </div>
   )
 }
